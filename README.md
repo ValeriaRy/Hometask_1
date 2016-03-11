@@ -1,2 +1,2 @@
 # Hometask_1
-maze
+http://valeriary.github.io/Hometask_1/
