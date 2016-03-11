@@ -1,0 +1,85 @@
+body {
+  color: #B1967C;
+  font-family: "Palatino Linotype", Baskerville, serif;
+  padding-top: 15px;
+  background: #CDE6FF url(http://s014.radikal.ru/i327/1603/7e/8552871b87f5.png) repeat-x;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: "Arial Black", Arial, sans-serif;
+  margin-bottom: 15px;
+}
+
+p {
+    margin-top: 15px;
+}
+
+h5 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+table {
+    background-color: white;
+    margin: 60px auto;
+    margin-top: 40px;
+    border-collapse: collapse;
+}
+
+td {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+#button1, #button2 {
+    background-color: #E9F5FE;
+    padding: 15px;
+    font-size: 1.2em;
+    color: #B1967C;
+}
+
+.topBorder {
+    border-top: 20px solid black;
+}
+
+.rightBorder {
+    border-right: 20px solid black;
+}
+
+.bottomBorder {
+    border-bottom: 20px solid black;
+}
+
+.leftBorder {
+    border-left: 20px solid black;
+}
+
+.upperCorner {
+    border-top: 20px solid black;
+    border-right: 20px solid black;
+}
+
+.bottomCorner {
+    border-left: 20px solid black;
+    border-bottom: 20px solid black;
+}
+
+#numberMaze, #drawnMaze {
+    float:left;
+    margin-left:15px;
+    border: 1px solid #CDE6FF;
+    width: 45%;
+    text-align: center;
+}
+
+.inputText {
+    margin-top: 20px;
+    width: 60%;
+    height: 20em;
+}

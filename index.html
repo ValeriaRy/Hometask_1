@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/reset.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <title>Домашнее задание №1</title>
+    </head>
+    <body>
+        <h1>Лабиринт</h1>
+        <a href="Test.html">Тестирование</a>
+        <h5>Вход в лабиринт всегда в верхнем левом углу, выход всегда в нижнем правом углу</h5>
+        <script src="script/dfs.js"></script>
+        <script src="script/visualMaze.js"></script>
+        <div>
+            <p>Введите лабиринт в виде квадратной матрицы: 0-проход, 1-стена</p>
+            <p>Данные вводить через пробел. Новая строчка - с новой строки</p> <br/> 
+            <div id="numberMaze">
+                <input type="button" id="button1" value="ПРИНЯТЬ" onclick="setData()">
+                <br/>
+                <span id="text"> </span> <br/>
+                <textarea id="inputMatrix" class="inputText"></textarea>
+                <pre>
+                Пример:
+                0 1 0 0 0
+                0 1 0 1 0
+                0 0 0 1 0
+                1 1 0 1 0
+                1 1 1 1 0</pre>
+            </div>
+            <div id="drawnMaze">
+                <input type="button" id="button2" value="НАЙТИ ВЫХОД" onclick="getWay()">
+                <br/>
+                <p>Если путь не найден, то его нет :(</p>
+            </div>
+        </div>
+    </body>
+</html>
