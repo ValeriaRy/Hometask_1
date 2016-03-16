@@ -3,7 +3,7 @@ var startX = 0;
 var startY = 0;
 
 function crossChecking(array) {
-    if ((array[startXY][startY] == 1) || (array[array.length-1][array.length-1] == 1)) {
+    if ((array[startX][startY] == 1) || (array[array.length-1][array.length-1] == 1)) {
 		
         return "maze is impassable";
     } else {
