@@ -30,6 +30,7 @@ function passWave(x, y, k, visited, maze) {
             visited[x][y-1] = k;
         }
     }
+	
     return visited;
 }
       
