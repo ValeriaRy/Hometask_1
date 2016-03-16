@@ -1,9 +1,13 @@
-var x,y; 
+var x, y;
+var startX = 0;
+var startY = 0;
 
 function crossChecking(array) {
-    if ((array[0][0] == 1) || (array[array.length-1][array.length-1] == 1)) {
+    if ((array[startXY][startY] == 1) || (array[array.length-1][array.length-1] == 1)) {
+		
         return "maze is impassable";
     } else {
+		
         return "correct maze";
     }
 }
@@ -13,12 +17,15 @@ function passWave(x, y, k, visited, maze) {
         if ((x < maze.length-1) && (visited[x+1][y] == 0) && (maze[x+1][y] == 0)) {
             visited[x+1][y] = k;
         }
+		
         if ((x > 0) && (visited[x-1][y] == 0) && (maze[x-1][y] == 0)) {
             visited[x-1][y] = k;
         }
+		
         if ((y < maze.length-1) && (visited[x][y+1] == 0) && (maze[x][y+1] == 0)){
             visited[x][y+1] = k;
         }
+		
         if ((y > 0) && (visited[x][y-1] == 0) && (maze[x][y-1] == 0)) {
             visited[x][y-1] = k;
         }
@@ -27,7 +34,7 @@ function passWave(x, y, k, visited, maze) {
 }
       
 function dfs(array, mazeArray) {
-    array[0][0] = 1;
+    array[startX][startY] = 1;
     var k = 1;
     while (k < mazeArray.length * mazeArray.length) {
         k++;
@@ -37,6 +44,7 @@ function dfs(array, mazeArray) {
             }
         }
     } 
+	
     return array;
 }
       
@@ -47,6 +55,7 @@ function next(a, b, array, mazeArray) {
                 mazeArray[a][b] = 'GO'; 
                 x = i;
                 y = j;
+				
                 return mazeArray;
             }
         }
@@ -61,7 +70,8 @@ function back(array, mazeArray) {
     for (var step = 1; step < stepNumber; step++) {
         mazeArray = next(x, y, array, mazeArray);
     }
-    mazeArray[0][0] = 'GO';
+    mazeArray[startX][startY] = 'GO';
+	
     return mazeArray;
 }
      
@@ -73,5 +83,6 @@ function createMatrix(mazeArray) {
             array[i][n] = 0;
         }
     }
+	
     return array;
 }

@@ -2,10 +2,12 @@ function compareArray (array, array2) {
     for (var i = 0; i < array.length; i++) {
         for(var j = 0; j < array.length; j++) {
             if (array[i][j] != array2[i][j]) {
+				
                 return false;
             }
         }
     }
+	
     return true;
 }
 
@@ -55,6 +57,7 @@ describe ("MAZE", function() {
             var newArray = createMatrix(array);
             newArray.forEach(function(item, i, arr) {
                 if (item != 0){
+					
                     return false;
                 }
             })

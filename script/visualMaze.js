@@ -1,22 +1,33 @@
-var COLOR_BACKGROUND = "#7FFFD4";
+var COLOR_CELL_SHOW_WAY = "#7FFFD4";
 
-function mazeBorders(a,b,n) {
+function mazeBorders(a, b, n) {
     if ((a == 0) && (b == n-1)) {
+		
         return "upperCorner";
     }
+	
     if((a == 0) && (b != 0) && (b < n-1)) {
+		
         return "topBorder";
     }
+	
     if((b == n-1) && (a > 0)) {
+		
         return "rightBorder";
     }
+	
     if ((b > 0) && (b < n-1) && (a == n-1)) {
+		
         return "bottomBorder";
     }
+	
     if((b == 0) && (a == n-1)) {
+		
         return "bottomCorner";
     }
+	
     if((b == 0) && (a < n-1)) {
+		
         return "leftBorder";
     }
 }
@@ -50,7 +61,7 @@ function cellСreation(thisRow, array, i) {
             newCell.style.background = "black";
             newCell.innerHTML = 1;
         } else if (array[i][j] == "GO") {
-            newCell.style.background = COLOR_BACKGROUND;
+            newCell.style.background = COLOR_CELL_SHOW_WAY;
             newCell.innerHTML = 0;
         }
     }
@@ -66,7 +77,8 @@ function binaryRepresentation(matrix) {
                 return 1;
             }
         });
-    } 
+    }
+	
     return numbArray;
 }
 
@@ -78,6 +90,7 @@ function readMatrix (strText) {
         var array = arrayStr[j].split(' ', arrayStr[j].length);
         matrixArray[j] = array;
     }
+	
     return binaryRepresentation(matrixArray);
 }
 
